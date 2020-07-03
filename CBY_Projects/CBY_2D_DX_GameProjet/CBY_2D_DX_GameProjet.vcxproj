@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{6BD1B4E3-0EBE-49AC-82A0-299F3971CE7E}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>CBY2DDXGameProjet</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../output/Debug/CBY_2D_DX_GameProject</OutDir>
+    <IntDir>../../output/Debug/CBY_2D_DX_GameProject</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../output/Release/CBY_2D_DX_GameProject</OutDir>
+    <IntDir>../../output/Release/CBY_2D_DX_GameProject</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../include/net;../../fmod/inc;../../dx/include;../../include/dx;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../../fmod/lib/x64;../../lib;../../dx/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C_DXCore_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../include/net;../../include/dx;../../dx/include;../../fmod/inc;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../../dx/lib/x64;../../fmod/lib/x64;../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>C_DXCore_R.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="CBY_GameMain.cpp" />
+    <ClCompile Include="C_ATTACK.cpp" />
+    <ClCompile Include="C_Boss.cpp" />
+    <ClCompile Include="C_Clientsrc.cpp" />
+    <ClCompile Include="C_Create.cpp" />
+    <ClCompile Include="C_Damage.cpp" />
+    <ClCompile Include="C_DEATH.cpp" />
+    <ClCompile Include="C_Demolish.cpp" />
+    <ClCompile Include="C_EffectMgr.cpp" />
+    <ClCompile Include="C_EffectQueue.cpp" />
+    <ClCompile Include="C_EffectSrc.cpp" />
+    <ClCompile Include="C_GameMain.cpp" />
+    <ClCompile Include="C_GameMap.cpp" />
+    <ClCompile Include="C_HiddenTower.cpp" />
+    <ClCompile Include="C_InGame.cpp" />
+    <ClCompile Include="C_LevelUP.cpp" />
+    <ClCompile Include="C_lobby.cpp" />
+    <ClCompile Include="C_Lose.cpp" />
+    <ClCompile Include="C_Make.cpp" />
+    <ClCompile Include="C_Menu.cpp" />
+    <ClCompile Include="C_MonClear.cpp" />
+    <ClCompile Include="C_MoneyMgr.cpp" />
+    <ClCompile Include="C_monPig.cpp" />
+    <ClCompile Include="C_monRobo.cpp" />
+    <ClCompile Include="C_MonsterFsm.cpp" />
+    <ClCompile Include="C_MonsterHP.cpp" />
+    <ClCompile Include="C_MonsterSrc.cpp" />
+    <ClCompile Include="C_MonsterState.cpp" />
+    <ClCompile Include="C_Move.cpp" />
+    <ClCompile Include="C_Null.cpp" />
+    <ClCompile Include="C_ObjectMT.cpp" />
+    <ClCompile Include="C_ObjSrc.cpp" />
+    <ClCompile Include="C_PlayerHP.cpp" />
+    <ClCompile Include="C_Score.cpp" />
+    <ClCompile Include="C_ShapeMonsetHP.cpp" />
+    <ClCompile Include="C_STANDBY.cpp" />
+    <ClCompile Include="C_Start.cpp" />
+    <ClCompile Include="C_TowerCold.cpp" />
+    <ClCompile Include="C_TowerFsm.cpp" />
+    <ClCompile Include="C_TowerGoku.cpp" />
+    <ClCompile Include="C_TowerHiddenMgr.cpp" />
+    <ClCompile Include="C_TowerSrcMgr.cpp" />
+    <ClCompile Include="C_TowerStandBy.cpp" />
+    <ClCompile Include="C_TowerState.cpp" />
+    <ClCompile Include="C_TowerVegeta.cpp" />
+    <ClCompile Include="C_UIMoney.cpp" />
+    <ClCompile Include="GameRank.cpp" />
+    <ClCompile Include="MonsterMgr.cpp" />
+    <ClCompile Include="MonsterQueue.cpp" />
+    <ClCompile Include="TowerCoice.cpp" />
+    <ClCompile Include="TowerEffect.cpp" />
+    <ClCompile Include="TowerLose.cpp" />
+    <ClCompile Include="TowerPosition.cpp" />
+    <ClCompile Include="TowerScope.cpp" />
+    <ClCompile Include="TowerSrc.cpp" />
+    <ClCompile Include="TowerStart.cpp" />
+    <ClCompile Include="TowerUI.cpp" />
+    <ClCompile Include="TowerWeapon.cpp" />
+    <ClCompile Include="WeaponMgr.cpp" />
+    <ClCompile Include="WeaponQueue.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C_ATTACK.h" />
+    <ClInclude Include="C_Boss.h" />
+    <ClInclude Include="C_Clientsrc.h" />
+    <ClInclude Include="C_Create.h" />
+    <ClInclude Include="C_Damage.h" />
+    <ClInclude Include="C_DEATH.h" />
+    <ClInclude Include="C_Demolish.h" />
+    <ClInclude Include="C_EffectMgr.h" />
+    <ClInclude Include="C_EffectQueue.h" />
+    <ClInclude Include="C_EffectSrc.h" />
+    <ClInclude Include="C_GameMain.h" />
+    <ClInclude Include="C_GameMap.h" />
+    <ClInclude Include="C_GameStd.h" />
+    <ClInclude Include="C_HiddenTower.h" />
+    <ClInclude Include="C_InGame.h" />
+    <ClInclude Include="C_LevelUP.h" />
+    <ClInclude Include="C_lobby.h" />
+    <ClInclude Include="C_Lose.h" />
+    <ClInclude Include="C_Make.h" />
+    <ClInclude Include="C_Menu.h" />
+    <ClInclude Include="C_MonClear.h" />
+    <ClInclude Include="C_MoneyMgr.h" />
+    <ClInclude Include="C_monPig.h" />
+    <ClInclude Include="C_monRobo.h" />
+    <ClInclude Include="C_MonsterFsm.h" />
+    <ClInclude Include="C_MonsterHP.h" />
+    <ClInclude Include="C_MonsterSrc.h" />
+    <ClInclude Include="C_MonsterState.h" />
+    <ClInclude Include="C_Move.h" />
+    <ClInclude Include="C_Null.h" />
+    <ClInclude Include="C_ObjectMT.h" />
+    <ClInclude Include="C_ObjSrc.h" />
+    <ClInclude Include="C_PlayerHP.h" />
+    <ClInclude Include="C_Score.h" />
+    <ClInclude Include="C_ShapeMonsetHP.h" />
+    <ClInclude Include="C_STANDBY.h" />
+    <ClInclude Include="C_Start.h" />
+    <ClInclude Include="C_StateStd.h" />
+    <ClInclude Include="C_TowerCold.h" />
+    <ClInclude Include="C_TowerFsm.h" />
+    <ClInclude Include="C_TowerGoku.h" />
+    <ClInclude Include="C_TowerHiddenMgr.h" />
+    <ClInclude Include="C_TowerSrcMgr.h" />
+    <ClInclude Include="C_TowerStandBy.h" />
+    <ClInclude Include="C_TowerState.h" />
+    <ClInclude Include="C_TowerVegeta.h" />
+    <ClInclude Include="C_UIMoney.h" />
+    <ClInclude Include="GameMgr.h" />
+    <ClInclude Include="GameRank.h" />
+    <ClInclude Include="gamestd.h" />
+    <ClInclude Include="MonsterMgr.h" />
+    <ClInclude Include="MonsterQueue.h" />
+    <ClInclude Include="QueueStd.h" />
+    <ClInclude Include="TowerCoice.h" />
+    <ClInclude Include="TowerEffect.h" />
+    <ClInclude Include="TowerLose.h" />
+    <ClInclude Include="TowerPosition.h" />
+    <ClInclude Include="TowerScope.h" />
+    <ClInclude Include="TowerSrc.h" />
+    <ClInclude Include="TowerStart.h" />
+    <ClInclude Include="TowerUI.h" />
+    <ClInclude Include="TowerWeapon.h" />
+    <ClInclude Include="WeaponMgr.h" />
+    <ClInclude Include="WeaponQueue.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\C_DXCore\C_DXCore.vcxproj">
+      <Project>{2407b63d-d078-4f0d-b416-487bb9d20666}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\C_NetLib\C_NetLib.vcxproj">
+      <Project>{92fbda05-3de6-475f-85be-844c1548537e}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

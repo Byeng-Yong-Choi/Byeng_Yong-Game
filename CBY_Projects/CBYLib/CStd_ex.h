@@ -1,0 +1,10 @@
+#pragma once
+#include "C_Object.h"
+#include "Char.h"
+#include "Effect.h"
+#include "Monster.h"
+#include "Weapon.h"
+#include "BackGround.h"
+#include "Health.h"
+#include "CBYCore.h"
+#include "C_SoundManager.h"

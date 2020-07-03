@@ -1,0 +1,24 @@
+#pragma once
+#include "CBY_MeshSkin.h"
+
+enum SET_DATA_TYPES
+{
+	NULL_DATA = 0,
+	BOOL_DATA,
+	INT_DATA,
+	FLOAT_DATA,
+	STRING_DATA,
+	VECTOR_DATA,
+	VERTEX_DATA,
+	INDEX_DATA,
+	FACE_DATA,
+	MATRIX_DATA,
+	SCENE_DATA
+};
+
+enum AniType
+{
+	ANI_POS = 0,
+	ANI_ROT,
+	ANI_SCL
+};

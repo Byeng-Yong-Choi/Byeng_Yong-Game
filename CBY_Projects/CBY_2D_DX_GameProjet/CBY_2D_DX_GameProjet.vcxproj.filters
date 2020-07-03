@@ -1,0 +1,501 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="FSM">
+      <UniqueIdentifier>{cea2a3c7-0beb-4805-bc77-0a1ad52be859}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\MONSTER">
+      <UniqueIdentifier>{eca541ef-a7da-4ca6-869c-b53c6a238e30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\TOWER">
+      <UniqueIdentifier>{ed0e8121-69ed-41e1-99b4-5cbe5d2e9868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\TOWER\TowerFSM">
+      <UniqueIdentifier>{b0ee4829-014b-4a56-af22-da62cfbee24b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\TOWER\TowerState">
+      <UniqueIdentifier>{0f4070c7-3d4a-43e6-b5e6-6e934e57ae3e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\MONSTER\MonsterFSM">
+      <UniqueIdentifier>{8f8ff2c8-664f-4ed2-bfa6-d26ecf3fbc82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\MONSTER\MonsterState">
+      <UniqueIdentifier>{5cddedfa-1372-4773-8a1a-4b8bfd582800}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\MONSTER\MonsterState\헤더">
+      <UniqueIdentifier>{50e224fb-1753-428e-b18b-44db16e8f16d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\MONSTER\MonsterState\소스">
+      <UniqueIdentifier>{188a16df-28dd-4e20-911a-2d8504a59a45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\TOWER\TowerState\헤더">
+      <UniqueIdentifier>{360fa6e3-fbbf-4c42-acd3-26749c0af80b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="FSM\TOWER\TowerState\소스">
+      <UniqueIdentifier>{91f7ccdc-e297-432a-9699-495404c0cf1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower">
+      <UniqueIdentifier>{dad76db8-c8f9-4d2f-89f7-a3d7383654ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameMain">
+      <UniqueIdentifier>{7d25e3a1-938e-4076-b42e-9c4f1d5e20e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\a">
+      <UniqueIdentifier>{c63ee7fc-558c-4498-a91c-b9b1a6fc68cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerChar">
+      <UniqueIdentifier>{2e79f9bb-c695-4d3d-91b8-f63f464adae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerChar\Goku">
+      <UniqueIdentifier>{396e25d3-ea24-414d-aba5-2c9189de8236}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerChar\Vegeta">
+      <UniqueIdentifier>{79a64d3f-8fab-47e7-af98-ac4a2aa4a2ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerChar\Cold">
+      <UniqueIdentifier>{8d4f51c7-b760-43ab-ba44-729fc2d5bc75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerSrc">
+      <UniqueIdentifier>{22df511c-0b4c-4b84-9a1f-d5f6c3621b49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\Tower">
+      <UniqueIdentifier>{9fb67fe0-3ca1-4b5b-9c85-c8feea1ef387}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Map">
+      <UniqueIdentifier>{60bde5aa-3cb1-4a68-ada4-480cfc74f663}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monster">
+      <UniqueIdentifier>{22550727-41d0-4343-b53f-1d5b9af89805}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monster\MonsterObj">
+      <UniqueIdentifier>{b1c80f9b-6628-48e4-81fb-6832aa9f4620}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monster\MonsterSrc">
+      <UniqueIdentifier>{e172d828-5130-4d0c-b958-2c201520f11f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Monster\Mgr">
+      <UniqueIdentifier>{ef05ffdb-8e39-4280-8775-5e1f84d58b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\Queue%28Weapon,Effect%29">
+      <UniqueIdentifier>{07869542-2c93-44fc-af67-7dc80acb817f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\Queue%28Weapon,Effect%29\Effect">
+      <UniqueIdentifier>{2b46dc42-5e4d-4b5f-a6ef-67d5ef5adbbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\Queue%28Weapon,Effect%29\Weapon">
+      <UniqueIdentifier>{714e1f12-668d-4e64-a9cb-b7249dace22f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="STD">
+      <UniqueIdentifier>{9af9d0ef-17e8-4b0a-9ad0-24b92296cea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI">
+      <UniqueIdentifier>{b83a0295-e2cf-42f3-b0fc-a96a7545cef2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Money">
+      <UniqueIdentifier>{b9fa149c-b358-47f1-9e06-f6d1aa60be22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Monster">
+      <UniqueIdentifier>{e1101959-e1c5-4c67-9043-ccfdf706ba19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Packet">
+      <UniqueIdentifier>{a6c81198-020d-4983-a589-09f8f591a906}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="StartLogin. Lobby">
+      <UniqueIdentifier>{753d5ec6-ad8d-49db-844a-6ae515d20927}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UI\Score">
+      <UniqueIdentifier>{b233d426-7769-4a8d-8a89-08e9e6e0680e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tower\TowerChar\Hidden">
+      <UniqueIdentifier>{f729e01e-1649-4203-8268-34925ba5fa42}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="GameRank.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerLose.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerStart.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ObjectMT.cpp">
+      <Filter>FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerState.cpp">
+      <Filter>FSM\TOWER\TowerFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerFsm.cpp">
+      <Filter>FSM\TOWER\TowerFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterState.cpp">
+      <Filter>FSM\MONSTER\MonsterFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterFsm.cpp">
+      <Filter>FSM\MONSTER\MonsterFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Damage.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_DEATH.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonClear.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Move.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_STANDBY.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Make.cpp">
+      <Filter>FSM\MONSTER\MonsterState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ATTACK.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Create.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Demolish.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_LevelUP.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Null.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerStandBy.cpp">
+      <Filter>FSM\TOWER\TowerState\소스</Filter>
+    </ClCompile>
+    <ClCompile Include="CBY_GameMain.cpp">
+      <Filter>GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerEffect.cpp">
+      <Filter>Tower\a</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerScope.cpp">
+      <Filter>Tower\a</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerGoku.cpp">
+      <Filter>Tower\TowerChar\Goku</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerCold.cpp">
+      <Filter>Tower\TowerChar\Cold</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerVegeta.cpp">
+      <Filter>Tower\TowerChar\Vegeta</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerSrc.cpp">
+      <Filter>Tower\TowerSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerPosition.cpp">
+      <Filter>Tower\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="C_GameMain.cpp">
+      <Filter>GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="C_GameMap.cpp">
+      <Filter>Map</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterSrc.cpp">
+      <Filter>Monster\MonsterSrc</Filter>
+    </ClCompile>
+    <ClCompile Include="C_monPig.cpp">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterQueue.cpp">
+      <Filter>Monster\Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="MonsterMgr.cpp">
+      <Filter>Monster\Mgr</Filter>
+    </ClCompile>
+    <ClCompile Include="C_EffectSrc.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="C_EffectMgr.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="C_EffectQueue.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponMgr.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerWeapon.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="WeaponQueue.cpp">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerCoice.cpp">
+      <Filter>Tower\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Menu.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ObjSrc.cpp">
+      <Filter>Tower\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="C_PlayerHP.cpp">
+      <Filter>UI</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MoneyMgr.cpp">
+      <Filter>UI\Money</Filter>
+    </ClCompile>
+    <ClCompile Include="C_UIMoney.cpp">
+      <Filter>UI\Money</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterHP.cpp">
+      <Filter>UI\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ShapeMonsetHP.cpp">
+      <Filter>UI\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="C_monRobo.cpp">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClCompile>
+    <ClCompile Include="C_InGame.cpp">
+      <Filter>GameMain</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Clientsrc.cpp">
+      <Filter>Packet</Filter>
+    </ClCompile>
+    <ClCompile Include="C_lobby.cpp">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Start.cpp">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Score.cpp">
+      <Filter>UI\Score</Filter>
+    </ClCompile>
+    <ClCompile Include="C_HiddenTower.cpp">
+      <Filter>Tower\TowerChar\Hidden</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerHiddenMgr.cpp">
+      <Filter>Tower\Tower</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Boss.cpp">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Lose.cpp">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerSrcMgr.cpp">
+      <Filter>Tower\Tower</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GameRank.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="gamestd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerLose.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerStart.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerUI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ObjectMT.h">
+      <Filter>FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerState.h">
+      <Filter>FSM\TOWER\TowerFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerFsm.h">
+      <Filter>FSM\TOWER\TowerFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterState.h">
+      <Filter>FSM\MONSTER\MonsterFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterFsm.h">
+      <Filter>FSM\MONSTER\MonsterFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Damage.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Make.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonClear.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Move.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_STANDBY.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_DEATH.h">
+      <Filter>FSM\MONSTER\MonsterState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Create.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Demolish.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_LevelUP.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Null.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerStandBy.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ATTACK.h">
+      <Filter>FSM\TOWER\TowerState\헤더</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerEffect.h">
+      <Filter>Tower\a</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerScope.h">
+      <Filter>Tower\a</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerGoku.h">
+      <Filter>Tower\TowerChar\Goku</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerCold.h">
+      <Filter>Tower\TowerChar\Cold</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerVegeta.h">
+      <Filter>Tower\TowerChar\Vegeta</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerSrc.h">
+      <Filter>Tower\TowerSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerPosition.h">
+      <Filter>Tower\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="C_GameMain.h">
+      <Filter>GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="C_GameMap.h">
+      <Filter>Map</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterSrc.h">
+      <Filter>Monster\MonsterSrc</Filter>
+    </ClInclude>
+    <ClInclude Include="C_monPig.h">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterQueue.h">
+      <Filter>Monster\Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="MonsterMgr.h">
+      <Filter>Monster\Mgr</Filter>
+    </ClInclude>
+    <ClInclude Include="C_StateStd.h">
+      <Filter>FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_EffectSrc.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="C_EffectQueue.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="C_EffectMgr.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponMgr.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerWeapon.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="WeaponQueue.h">
+      <Filter>Tower\Queue%28Weapon,Effect%29\Weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="QueueStd.h">
+      <Filter>STD</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMgr.h">
+      <Filter>STD</Filter>
+    </ClInclude>
+    <ClInclude Include="C_GameStd.h">
+      <Filter>STD</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerCoice.h">
+      <Filter>Tower\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Menu.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ObjSrc.h">
+      <Filter>Tower\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="C_PlayerHP.h">
+      <Filter>UI</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MoneyMgr.h">
+      <Filter>UI\Money</Filter>
+    </ClInclude>
+    <ClInclude Include="C_UIMoney.h">
+      <Filter>UI\Money</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterHP.h">
+      <Filter>UI\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ShapeMonsetHP.h">
+      <Filter>UI\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="C_monRobo.h">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClInclude>
+    <ClInclude Include="C_InGame.h">
+      <Filter>GameMain</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Clientsrc.h">
+      <Filter>Packet</Filter>
+    </ClInclude>
+    <ClInclude Include="C_lobby.h">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Start.h">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Score.h">
+      <Filter>UI\Score</Filter>
+    </ClInclude>
+    <ClInclude Include="C_HiddenTower.h">
+      <Filter>Tower\TowerChar\Hidden</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerHiddenMgr.h">
+      <Filter>Tower\Tower</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Boss.h">
+      <Filter>Monster\MonsterObj</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Lose.h">
+      <Filter>StartLogin. Lobby</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerSrcMgr.h">
+      <Filter>Tower\Tower</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

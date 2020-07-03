@@ -1,0 +1,43 @@
+#include "CBY_Mesh.h"
+
+
+
+CBY_Mesh::CBY_Mesh()
+{
+	m_iTexsize = 0;
+	m_bBone = false;
+	m_bRoot = false;
+	m_iParentIndex = -1;
+	m_iTexIndex = -1;
+	m_iBaseVertex = 0;
+	m_iNumVertex = 0;
+	m_iBaseIndex = 0;
+	m_iNumIndex = 0;
+	m_pTexture = nullptr;
+	m_pNormalTexture = nullptr;
+	m_pAOTexture = nullptr;
+	m_pSpecTexture = nullptr;
+	m_pEmsTexture = nullptr;
+	m_pDetailTexture = nullptr;
+	m_iType = GEOM_MESH;
+	ZeroMemory(&m_cbData, sizeof(CONDATA));
+}
+
+
+CBY_Mesh::~CBY_Mesh()
+{
+	m_BoneBox.Release();
+	m_pTexture=nullptr;
+	m_pNormalTexture = nullptr;
+	m_pAOTexture = nullptr;
+	m_pSpecTexture = nullptr;
+	m_pEmsTexture = nullptr;
+	m_pDetailTexture = nullptr;
+	m_vtlist.clear();
+	posTrack.clear();
+	rotTrack.clear();
+	sclTrack.clear();
+	vblist.clear();
+	iblist.clear();
+	m_subMesh.clear();
+}

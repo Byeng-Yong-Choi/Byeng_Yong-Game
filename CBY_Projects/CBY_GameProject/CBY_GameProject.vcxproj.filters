@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="소스 파일\Tower">
+      <UniqueIdentifier>{94f9f48b-b92e-48e6-8e9b-31e9e4c3fd6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Tower\TowerFSM">
+      <UniqueIdentifier>{dfb4ca78-68fc-41e7-a9c7-abc9fb2ba57e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Tower\TowerState">
+      <UniqueIdentifier>{ad7087ca-ccd1-4499-8121-40e09ee80337}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Monster">
+      <UniqueIdentifier>{700c3dcf-3e87-450b-a0c5-30f026bafa5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Monster\MonsterFSM">
+      <UniqueIdentifier>{6fdc96c5-f9af-4ea9-a2b9-7a8d7e71d2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Monster\MonsterState">
+      <UniqueIdentifier>{3c660e3c-175c-420c-9336-d4a25553f91f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\FSM">
+      <UniqueIdentifier>{a81820a7-dd1d-4b88-8659-473346260886}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CBY_GameMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerPosition.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerCoice.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerChar.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerScope.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterFsm.cpp">
+      <Filter>소스 파일\Monster\MonsterFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonsterState.cpp">
+      <Filter>소스 파일\Monster\MonsterFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Damage.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_DEATH.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Move.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_STANDBY.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerFsm.cpp">
+      <Filter>소스 파일\Tower\TowerFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerState.cpp">
+      <Filter>소스 파일\Tower\TowerFSM</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ATTACK.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Create.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Demolish.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_LevelUP.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Null.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_TowerStandBy.cpp">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Make.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerWeapon.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C_ObjectMT.cpp">
+      <Filter>소스 파일\FSM</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerEffect.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="C_MonClear.cpp">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerLose.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerUI.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="TowerStart.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="GameRank.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="TowerPosition.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerCoice.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerChar.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerScope.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterFsm.h">
+      <Filter>소스 파일\Monster\MonsterFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonsterState.h">
+      <Filter>소스 파일\Monster\MonsterFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Damage.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_DEATH.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Move.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_STANDBY.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerFsm.h">
+      <Filter>소스 파일\Tower\TowerFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerState.h">
+      <Filter>소스 파일\Tower\TowerFSM</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ATTACK.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Create.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Demolish.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_LevelUP.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Null.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_TowerStandBy.h">
+      <Filter>소스 파일\Tower\TowerState</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Make.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="gamestd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerWeapon.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C_ObjectMT.h">
+      <Filter>소스 파일\FSM</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerEffect.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="C_MonClear.h">
+      <Filter>소스 파일\Monster\MonsterState</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerLose.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerUI.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="TowerStart.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameMgr.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="GameRank.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

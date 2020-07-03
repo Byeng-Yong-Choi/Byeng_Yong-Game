@@ -1,0 +1,19 @@
+﻿  stdafx.cpp
+  CBY_GameTool.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  CBY_GameToolDoc.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  CBY_GameToolView.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  ClassView.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  FileView.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  MainFrm.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  OutputWnd.cpp
+  PropertiesWnd.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  Sample.cpp
+d:\hubsub\my_study\my_study\cby_projects\cby_gametool\sample.h(2): fatal error C1083: 포함 파일을 열 수 없습니다. 'CBYCore.h': No such file or directory
+  ViewTree.cpp

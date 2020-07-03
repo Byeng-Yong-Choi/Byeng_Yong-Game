@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="소스 파일">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="리소스 파일">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Window, DX">
+      <UniqueIdentifier>{1ce37125-0633-4488-9aee-0fc62a50a793}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window, DX\head">
+      <UniqueIdentifier>{9782c020-c023-44c7-9b66-72f813f4b11a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Window, DX\cpp">
+      <UniqueIdentifier>{10a42862-ddef-4d73-98b9-c99cfd3fa7d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net">
+      <UniqueIdentifier>{55ec46e4-f82d-49f8-88e4-94ffd9f8535c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net\head">
+      <UniqueIdentifier>{7a59d6c3-e9b6-4b24-9911-bf7682b78243}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Net\cpp">
+      <UniqueIdentifier>{613e20f2-db60-4266-a44f-68792ebd777d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="C_Device.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBYCore.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CBYWindow.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CCamera.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CDxHelper.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CDxHelperEx.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CDxState.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="CTime.cpp">
+      <Filter>Window, DX\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Client.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Lock.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_NetBase.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Network.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Server.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_Thread.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+    <ClCompile Include="C_User.cpp">
+      <Filter>Net\cpp</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C_Device.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CBYCore.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CBYWindow.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CCamera.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CDxHelper.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CDxHelperEx.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CDxState.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="CTime.h">
+      <Filter>Window, DX\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Client.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Lock.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetBase.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Network.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Protocol.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Server.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_Thread.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_User.h">
+      <Filter>Net\head</Filter>
+    </ClInclude>
+    <ClInclude Include="C_NetStd.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
