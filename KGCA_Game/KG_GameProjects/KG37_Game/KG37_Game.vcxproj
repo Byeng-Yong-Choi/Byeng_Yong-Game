@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{23B96E9D-B2C0-4F6E-AAAC-5D88C9CBE378}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>KG37Game</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../../output/Debug/KG37_Game/</OutDir>
+    <IntDir>../../output/Debug/KG37_Game/</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../../output/Release/KG37_Game/</OutDir>
+    <IntDir>../../output/Release/KG37_Game/</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../fmod/inc;../../dx/include;../../include/KG;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../../fmod/lib/x64;../../lib;../../dx/lib/x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>../../include/KG;../../fmod/inc;../../dx/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>../../dx/lib/x64;../../fmod/lib/x64;../../lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="BattleScene.h" />
+    <ClInclude Include="BossScene.h" />
+    <ClInclude Include="CBY_BossAi.h" />
+    <ClInclude Include="CBY_BossAttack.h" />
+    <ClInclude Include="CBY_BossDie.h" />
+    <ClInclude Include="CBY_BossDragon.h" />
+    <ClInclude Include="CBY_BossFlame.h" />
+    <ClInclude Include="CBY_BossFlyLand.h" />
+    <ClInclude Include="CBY_BossFSM.h" />
+    <ClInclude Include="CBY_BossHit.h" />
+    <ClInclude Include="CBY_BossIdle.h" />
+    <ClInclude Include="CBY_BossState.h" />
+    <ClInclude Include="CBY_BossStateStd.h" />
+    <ClInclude Include="CBY_BossWalk.h" />
+    <ClInclude Include="CBY_Bullet.h" />
+    <ClInclude Include="CBY_BulletMgr.h" />
+    <ClInclude Include="CBY_BulletQueue.h" />
+    <ClInclude Include="CBY_CharacterSrc.h" />
+    <ClInclude Include="CBY_CharacterStateStd.h" />
+    <ClInclude Include="CBY_EnemyAi.h" />
+    <ClInclude Include="CBY_EnemyAttack.h" />
+    <ClInclude Include="CBY_EnemyDamage.h" />
+    <ClInclude Include="CBY_EnemyDeath.h" />
+    <ClInclude Include="CBY_EnemyFSM.h" />
+    <ClInclude Include="CBY_EnemyIdle.h" />
+    <ClInclude Include="CBY_EnemyJump.h" />
+    <ClInclude Include="CBY_EnemyMove.h" />
+    <ClInclude Include="CBY_EnemyReload.h" />
+    <ClInclude Include="CBY_EnemyRobot.h" />
+    <ClInclude Include="CBY_EnemyRun.h" />
+    <ClInclude Include="CBY_EnemySpider.h" />
+    <ClInclude Include="CBY_EnemyState.h" />
+    <ClInclude Include="CBY_EnemyStateStd.h" />
+    <ClInclude Include="CBY_FPSCharacter.h" />
+    <ClInclude Include="CBY_GameMgr.h" />
+    <ClInclude Include="CBY_Hero.h" />
+    <ClInclude Include="CBY_HeroDamage.h" />
+    <ClInclude Include="CBY_HeroDeath.h" />
+    <ClInclude Include="CBY_HeroFire.h" />
+    <ClInclude Include="CBY_HeroFSM.h" />
+    <ClInclude Include="CBY_HeroIdle.h" />
+    <ClInclude Include="CBY_HeroJump.h" />
+    <ClInclude Include="CBY_HeroMove.h" />
+    <ClInclude Include="CBY_HeroReload.h" />
+    <ClInclude Include="CBY_HeroRun.h" />
+    <ClInclude Include="CBY_HeroState.h" />
+    <ClInclude Include="CBY_HeroStateStd.h" />
+    <ClInclude Include="CBY_LoadingMgr.h" />
+    <ClInclude Include="GameEnd.h" />
+    <ClInclude Include="KG_GameStd.h" />
+    <ClInclude Include="KG_Point.h" />
+    <ClInclude Include="LobbyScene.h" />
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="SceneDirector.h" />
+    <ClInclude Include="SceneMgr.h" />
+    <ClInclude Include="TitleScene.h" />
+    <ClInclude Include="UI_button.h" />
+    <ClInclude Include="UI_minimap.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="BattleScene.cpp" />
+    <ClCompile Include="BossScene.cpp" />
+    <ClCompile Include="CBY_BossAi.cpp" />
+    <ClCompile Include="CBY_BossAttack.cpp" />
+    <ClCompile Include="CBY_BossDie.cpp" />
+    <ClCompile Include="CBY_BossDragon.cpp" />
+    <ClCompile Include="CBY_BossFlame.cpp" />
+    <ClCompile Include="CBY_BossFlyLand.cpp" />
+    <ClCompile Include="CBY_BossFSM.cpp" />
+    <ClCompile Include="CBY_BossHit.cpp" />
+    <ClCompile Include="CBY_BossIdle.cpp" />
+    <ClCompile Include="CBY_BossState.cpp" />
+    <ClCompile Include="CBY_BossWalk.cpp" />
+    <ClCompile Include="CBY_Bullet.cpp" />
+    <ClCompile Include="CBY_BulletMgr.cpp" />
+    <ClCompile Include="CBY_BulletQueue.cpp" />
+    <ClCompile Include="CBY_CharacterSrc.cpp" />
+    <ClCompile Include="CBY_EnemyAi.cpp" />
+    <ClCompile Include="CBY_EnemyAttack.cpp" />
+    <ClCompile Include="CBY_EnemyDamage.cpp" />
+    <ClCompile Include="CBY_EnemyDeath.cpp" />
+    <ClCompile Include="CBY_EnemyFSM.cpp" />
+    <ClCompile Include="CBY_EnemyIdle.cpp" />
+    <ClCompile Include="CBY_EnemyJump.cpp" />
+    <ClCompile Include="CBY_EnemyMove.cpp" />
+    <ClCompile Include="CBY_EnemyReload.cpp" />
+    <ClCompile Include="CBY_EnemyRobot.cpp" />
+    <ClCompile Include="CBY_EnemyRun.cpp" />
+    <ClCompile Include="CBY_EnemySpider.cpp" />
+    <ClCompile Include="CBY_EnemyState.cpp" />
+    <ClCompile Include="CBY_FPSCharacter.cpp" />
+    <ClCompile Include="CBY_GameMgr.cpp" />
+    <ClCompile Include="CBY_Hero.cpp" />
+    <ClCompile Include="CBY_HeroDamage.cpp" />
+    <ClCompile Include="CBY_HeroDeath.cpp" />
+    <ClCompile Include="CBY_HeroFire.cpp" />
+    <ClCompile Include="CBY_HeroFSM.cpp" />
+    <ClCompile Include="CBY_HeroIdle.cpp" />
+    <ClCompile Include="CBY_HeroJump.cpp" />
+    <ClCompile Include="CBY_HeroMove.cpp" />
+    <ClCompile Include="CBY_HeroReload.cpp" />
+    <ClCompile Include="CBY_HeroRun.cpp" />
+    <ClCompile Include="CBY_HeroState.cpp" />
+    <ClCompile Include="CBY_LoadingMgr.cpp" />
+    <ClCompile Include="GameEnd.cpp" />
+    <ClCompile Include="KG_Point.cpp" />
+    <ClCompile Include="LobbyScene.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SceneDirector.cpp" />
+    <ClCompile Include="SceneMgr.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
+    <ClCompile Include="UI_button.cpp" />
+    <ClCompile Include="UI_minimap.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\data\shader\BossShader.txt" />
+    <Text Include="..\..\data\shader\LobaShader.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
