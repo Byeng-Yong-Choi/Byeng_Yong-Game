@@ -27,11 +27,6 @@ HRESULT CTexture::Load(ID3D11Device* pDevice, const TCHAR* strFilePath, bool btg
 
 												// Load the Texture
 		hr = D3DX11CreateShaderResourceViewFromFile(pDevice, szFileName, &loadInfo, NULL, &m_pTextureRV, NULL);
-		if (FAILED(hr))
-		{
-			//ErrorQuit(szFileName);
-			return hr;
-		}
 	}
 
 	pScratchImage->Release();
