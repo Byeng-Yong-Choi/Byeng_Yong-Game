@@ -1,0 +1,6 @@
+.vs/
+data/
+lib/*.lib
+*/*.lib
+output/*
+include/*

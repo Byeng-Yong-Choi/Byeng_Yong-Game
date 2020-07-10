@@ -1,0 +1,83 @@
+#include "CBY_BossFSM.h"
+
+namespace CBY
+{
+	bool CBY_BossFSM::Init()
+	{
+		//IDLE
+		Input(BOSS_STATE_IDLE, EVENT_CREATE, BOSS_STATE_IDLE);
+		Input(BOSS_STATE_IDLE, EVENT_MOVE, BOSS_STATE_WALK);
+		Input(BOSS_STATE_IDLE, EVENT_DAMAGE, BOSS_STATE_HIT);
+		Input(BOSS_STATE_IDLE, EVENT_DEATH, BOSS_STATE_DIE);
+		Input(BOSS_STATE_IDLE, EVENT_ATTACK, BOSS_STATE_ATTACK);
+		Input(BOSS_STATE_IDLE, EVENT_SKILL, BOSS_STATE_FLAME);
+		Input(BOSS_STATE_IDLE, EVENT_FLYLAND, BOSS_STATE_FLYLAND);
+
+		//Move
+		Input(BOSS_STATE_WALK, EVENT_ATTACK, BOSS_STATE_ATTACK);
+		Input(BOSS_STATE_WALK, EVENT_DAMAGE, BOSS_STATE_HIT);
+		Input(BOSS_STATE_WALK, EVENT_DEATH, BOSS_STATE_DIE);
+		Input(BOSS_STATE_WALK, EVENT_IDLE, BOSS_STATE_IDLE);
+		Input(BOSS_STATE_WALK, EVENT_SKILL, BOSS_STATE_FLAME);
+
+		//Damage
+		Input(BOSS_STATE_HIT, EVENT_MOVE, BOSS_STATE_WALK);
+		Input(BOSS_STATE_HIT, EVENT_IDLE, BOSS_STATE_IDLE);
+		Input(BOSS_STATE_HIT, EVENT_DAMAGE, BOSS_STATE_HIT);
+		Input(BOSS_STATE_HIT, EVENT_DEATH, BOSS_STATE_DIE);
+
+		//Attack
+		Input(BOSS_STATE_ATTACK, EVENT_IDLE, BOSS_STATE_IDLE);
+		Input(BOSS_STATE_ATTACK, EVENT_DAMAGE, BOSS_STATE_HIT);
+		Input(BOSS_STATE_ATTACK, EVENT_DEATH, BOSS_STATE_DIE);
+		Input(BOSS_STATE_ATTACK, EVENT_MOVE, BOSS_STATE_WALK);
+		Input(BOSS_STATE_ATTACK, EVENT_SKILL, BOSS_STATE_FLAME);
+
+		//Skill
+		Input(BOSS_STATE_FLAME, EVENT_IDLE, BOSS_STATE_IDLE);
+		Input(BOSS_STATE_FLAME, EVENT_DEATH, BOSS_STATE_DIE);
+
+		//Death
+		Input(BOSS_STATE_DIE, EVENT_CREATE, BOSS_STATE_IDLE);
+
+		Input(BOSS_STATE_FLYLAND, EVENT_IDLE, BOSS_STATE_IDLE);
+
+		return true;
+	}
+
+	void CBY_BossFSM::Input(DWORD State, DWORD Event, DWORD Output)
+	{
+		CBY_BossState* Boss = nullptr;
+
+		std::map< DWORD, CBY_BossState*>::iterator BossIter;
+		BossIter = m_MapList.find(State);
+		if (BossIter == m_MapList.end())
+		{
+			Boss = new CBY_BossState;
+			m_MapList[State] = Boss;
+		}
+		else
+		{
+			Boss = (CBY_BossState*)BossIter->second;
+		}
+
+		Boss->Input(Event, Output);
+
+	}
+
+	DWORD CBY_BossFSM::Output(DWORD State, DWORD Event)
+	{
+		CBY_BossState* pherostate = m_MapList[State];
+		return pherostate->Output(Event);
+	}
+
+	CBY_BossFSM::CBY_BossFSM()
+	{
+	}
+
+
+	CBY_BossFSM::~CBY_BossFSM()
+	{
+	}
+}
+
