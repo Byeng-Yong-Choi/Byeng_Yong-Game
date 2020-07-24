@@ -174,8 +174,10 @@ bool CBY_DataCtrl::Load(const TCHAR* pszLoad)
 		_stscanf_s(pBuffer, _T("%d%f%f%f%f%f%f"), &index
 			, &pos.x, &pos.y, &pos.z,
 			&size.x, &size.y, &size.z);
-		
-		m_data.ColBoxList[dw].CreateBox(index, pos, size.x, size.y, size.z);
+
+		D3DXMATRIX mat;
+		D3DXMatrixIdentity(&mat);
+		m_data.ColBoxList[dw].CreateBox(index, pos, size.x, size.y, size.z,mat);
 	}
 
 	if (objsize > 0)

@@ -1,0 +1,78 @@
+﻿  CBY_Deque.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+  CBY_LinkedList.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+  CBY_Node.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+  CBY_Queue.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+  CBY_Stack.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+  Main.cpp
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\main.cpp(7): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(261): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_LinkedList<T>::CBY_LinkedList'을(를) 사용하십시오.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(262): note: 클래스 템플릿 멤버 함수 'CBY_LinkedList<T>::CBY_LinkedList(void)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_stack.cpp(22): note: 컴파일 중인 함수 템플릿 인스턴스화 'CBY_LinkedList<T>::CBY_LinkedList(void)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_stack.cpp(6): note: 컴파일 중인 클래스 템플릿 인스턴스화 'CBY_LinkedList<T>'에 대한 참조를 확인하세요.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_stack.cpp(5): note: 클래스 템플릿 멤버 함수 'void CBY_Stack<int>::Push(T)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\main.cpp(68): note: 컴파일 중인 함수 템플릿 인스턴스화 'void CBY_Stack<int>::Push(T)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\main.cpp(8): note: 컴파일 중인 클래스 템플릿 인스턴스화 'CBY_Stack<int>'에 대한 참조를 확인하세요.
+d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(17): warning C4812: 사용되지 않는 선언 스타일입니다. 대신 'CBY_Node<T>::CBY_Node'을(를) 사용하십시오.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_node.cpp(18): note: 클래스 템플릿 멤버 함수 'CBY_Node<T>::CBY_Node(void)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(44): note: 컴파일 중인 함수 템플릿 인스턴스화 'CBY_Node<T>::CBY_Node(void)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_linkedlist.h(43): note: 클래스 템플릿 멤버 함수 'void CBY_LinkedList<T>::Init(void)'을(를) 컴파일하고 있습니다.
+          with
+          [
+              T=int
+          ]
+  d:\pot\byeng_yong-game\cby_projects\cby_linkedlist\cby_stack.cpp(23): note: 컴파일 중인 함수 템플릿 인스턴스화 'void CBY_LinkedList<T>::Init(void)'에 대한 참조를 확인하십시오.
+          with
+          [
+              T=int
+          ]
+  코드를 생성하고 있습니다.
+  All 50 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  CBY_LinkedList.vcxproj -> D:\pot\Byeng_Yong-Game\CBY_Projects\x64\Release\CBY_LinkedList.exe

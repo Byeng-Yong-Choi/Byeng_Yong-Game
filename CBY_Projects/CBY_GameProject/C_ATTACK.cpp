@@ -52,7 +52,7 @@ void C_ATTACK::Process(list<C_Monster*>& obj)
 	if (m_pTower->MakeLvTower)
 	{
 		{
-			for (auto monster : obj)																					//몬스터와 캐릭터의 범위 충돌여부 파악후 미사일 생성 발사
+			for (auto monster : obj)										//몬스터와 캐릭터의 범위 충돌여부 파악후 미사일 생성 발사
 			{
 				towerfS = m_pTower->m_LVTower[Tower].charfsp;
 				monsterfS = monster->fsp;
@@ -60,8 +60,6 @@ void C_ATTACK::Process(list<C_Monster*>& obj)
 				{
 					if (m_pTower->TowerNumber == 2)
 					{
-						
-				
 							monster->monSpeed = MONSTERSPPED - MONSTERSPPED / 3.0f;
 							m_pTower->m_LVTower[Tower].Enemy(m_pTower->CenterPT, monster->GetPoint());
 							cold = true;
@@ -70,39 +68,20 @@ void C_ATTACK::Process(list<C_Monster*>& obj)
 					{
 						if (m_pTower->m_LVTower[Tower].WeaponGo)
 						{
-							if (m_pTower->TowerNumber == 3 && m_pTower->m_WeaponList.size() == 1)
-							{
-								for (auto wealist : m_pTower->m_WeaponList)
-								{
-									dgr = m_pTower->m_LVTower[Tower].Enemy(m_pTower->CenterPT, monster->GetPoint());
-									wealist->mondgr = dgr;
-									if (m_pTower->m_LVTower[Tower].Revers)
-									{
-										wealist->Revers = true;
-									}
-									else
-									{
-										wealist->Revers = false;
-									}
-								}
-							}
-							else
-							{
-								MonsterNumber = monster->index;
-								TowerWeapon* Weapon = new TowerWeapon(m_pTower->m_Weapon[Tower]);
+							MonsterNumber = monster->index;
+							TowerWeapon* Weapon = new TowerWeapon(m_pTower->m_Weapon[Tower]);
 
-								
-								if (m_pTower->m_Tower[Tower].Revers)
+							
+							if (m_pTower->m_Tower[Tower].Revers)
+							{
+								Weapon->Revers = m_pTower->m_Tower[Tower].Revers;
+								if (!m_pTower->TowerNumber == 3)
 								{
-									Weapon->Revers = m_pTower->m_Tower[Tower].Revers;
-									if (!m_pTower->TowerNumber == 3)
-									{
-										Weapon->SetPosition(m_pTower->BitMapRt.left, m_pTower->CenterPT.y);
-									}
+									Weapon->SetPosition(m_pTower->BitMapRt.left, m_pTower->CenterPT.y);
 								}
-								m_pTower->m_WeaponList.push_back(Weapon);
-								m_pTower->m_WeaponList.back()->GetMonsterNum(MonsterNumber);
 							}
+							m_pTower->m_WeaponList.push_back(Weapon);
+							m_pTower->m_WeaponList.back()->GetMonsterNum(MonsterNumber);
 						}
 
 						m_pTower->m_LVTower[Tower].Enemy(m_pTower->CenterPT, monster->GetPoint());

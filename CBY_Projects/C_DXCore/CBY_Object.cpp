@@ -299,12 +299,43 @@ D3DXVECTOR3 CBY_Object::GetCharPos()
 	return pos;
 }
 
+
+void CBY_Object::BoxUpdate(D3DXMATRIX world)
+{
+	//캐릭터를 감싼 바운딩 박스의 움직임을 제어하는 곳
+	D3DXMATRIX matRot;
+	D3DXVECTOR3 vScale, vPos, vSize;
+	D3DXQUATERNION qRot;
+	D3DXMatrixDecompose(&vScale, &qRot, &vPos, &world);
+	D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+	vSize = m_CharBox.GetInitBoxSize();
+	vSize.x *= vScale.x;
+	vSize.y *= vScale.y;
+	vSize.z *= vScale.z;
+
+	m_CharBox.CreateBox(0, vPos, abs(vSize.x), abs(vSize.y), abs(vSize.z), matRot);		//박스 업데이트
+
+	m_CharBox.UpdateBoxAxis(matRot);
+
+	matRot._41 = vPos.x;
+	matRot._42 = vPos.y;
+	matRot._43 = vPos.z;
+	m_CharBox.SetMatrix(&matRot, &m_matView, &m_matProj);
+}
+
+void CBY_Object::SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)
+{
+	C_Model::SetMatrix(world, view, proj);
+}
+
 void CBY_Object::SetCharBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	m_Bone->m_CharBox.vCenter.y = (m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.y + m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.y) / 2;
 	D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
-	//m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
+	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z, mat);
 }
 
 CBY_CharBox CBY_Object::GetCharBox()
@@ -331,11 +362,15 @@ int CBY_Object::GetColBoxSize()
 
 void CBY_Object::CreateColBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 	{
 		D3DXVECTOR3 size = m_BoxList[iBox].GetSize();
+		m_BoxList[iBox].SetInitBoxSize(size);						//초기 박스 사이즈
+		m_BoxList[iBox].SetInitPos(m_BoxList[iBox].GetPos());		//초기 위치
 		m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-			m_BoxList[iBox].GetPos(), size.x, size.y, size.z);
+			m_BoxList[iBox].GetPos(), size.x, size.y, size.z, mat);
 	}
 }
 

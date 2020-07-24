@@ -87,6 +87,40 @@ bool C_Character::Release()
 	return true;
 }
 
+void C_Character::ColBoxUpdate(D3DXMATRIX world)
+{
+	for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
+	{
+		D3DXMATRIX matworld, matRot;
+		matworld = m_pMatrixList[m_BoxList[iBox].GetBoneIndex()] * (world);
+		D3DXVECTOR3 vScale, vPos, vSize;
+		D3DXQUATERNION qRot;
+		D3DXMatrixDecompose(&vScale, &qRot, &vPos, &matworld);
+		D3DXMatrixRotationQuaternion(&matRot, &qRot);
+
+		vSize = m_BoxList[iBox].GetInitBoxSize();
+		vSize.x *= vScale.x;
+		vSize.y *= vScale.y;
+		vSize.z *= vScale.z;
+
+		m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
+			vPos, abs(vSize.x), abs(vSize.y), abs(vSize.z), matRot);
+
+		m_BoxList[iBox].UpdateBoxAxis(matRot);
+	}
+}
+
+void C_Character::SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)
+{
+	C_Model::SetMatrix(world, view, proj);
+
+	if (world != nullptr)
+	{
+		BoxUpdate(*world);
+		ColBoxUpdate(*world);
+	}
+}
+
 C_Character::C_Character()
 {
 }

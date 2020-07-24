@@ -48,7 +48,6 @@ HRESULT C_TowerSrcMgr::Create(ID3D11Device* pd3dDevice, ID3D11DeviceContext* Con
 		}
 
 	}
-
 }
 
 bool C_TowerSrcMgr::Release()

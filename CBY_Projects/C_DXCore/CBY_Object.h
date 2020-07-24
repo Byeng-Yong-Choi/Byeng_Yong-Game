@@ -78,6 +78,7 @@ public:
 	virtual bool Render();
 
 public:
+	virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)override;
 	virtual void SetState(int dw);							//캐릭터 상태 설정
 	virtual int GetStateNum();								//캐릭터의 상태번호 받아오기
 	virtual void SetCharRootBone(int ibone);				//캐릭터의 위치정보를 가질 루트오브젝트 설정
@@ -85,6 +86,7 @@ public:
 
 
 public:				//Box
+	virtual void BoxUpdate(D3DXMATRIX world);
 	virtual void SetCharBox();
 	virtual CBY_CharBox GetCharBox();
 	virtual void SetColBoxList(std::vector<CBY_CharBox>& boxlist);

@@ -5,7 +5,7 @@
 bool CBY_CharacterToolSet::ObjLoad(T_STR pszSkinLoad)
 {
 	std::shared_ptr<CBY_ObjectToolSet> obj = std::make_shared<CBY_ObjectToolSet>();
-	obj->Create(m_obj.m_pd3dDevice, m_obj.m_pContext, L"../../data/shader/SkinShader.txt", nullptr, "VSOBJECT", "PS");
+	obj->Create(m_obj.m_pd3dDevice, m_obj.m_pContext, L"../../data/shader/SkinShader.txt", nullptr, "VSSKIN", "PS");
 	obj->SkinLoad(pszSkinLoad);
 	//obj->BoneLoad(pszMtrLoad);
 	m_ObjectList.push_back(obj);
@@ -84,6 +84,8 @@ bool CBY_CharacterToolSet::Frame()
 
 	for (int i = 0; i < m_ObjectList.size(); i++)
 	{
+		int socket = m_ObjectList[i]->GetSocket();
+		m_ObjectList[i]->Update(&m_pMatrixList[socket]);
 		m_ObjectList[i]->SetMatrix(&m_matWorld, &m_matView, &m_matProj);
 	}
 
@@ -167,7 +169,7 @@ void CBY_CharacterToolSet::ColBoxRender()
 	{
 		if (m_BoxList[ibox].GetBoneIndex() == m_iBoneSelect)
 		{
-			D3DXMATRIX mat = m_ObjList[0]->m_matBoneBindPoss[m_iBoneSelect] * m_pMatrixList[m_iBoneSelect];
+			/*D3DXMATRIX mat = m_ObjList[0]->m_matBoneBindPoss[m_iBoneSelect] * m_pMatrixList[m_iBoneSelect];
 
 
 			D3DXMATRIX world;
@@ -178,9 +180,10 @@ void CBY_CharacterToolSet::ColBoxRender()
 			D3DXMatrixRotationQuaternion(&world, &qrot);
 			world._41 = vpos.x;
 			world._42 = vpos.y;
-			world._43 = vpos.z;
+			world._43 = vpos.z;*/
 
-			m_BoxList[ibox].SetMatrix(&(mat*world),&m_matView, &m_matProj);
+			//m_BoxList[ibox].SetMatrix(nullptr,&m_matView, &m_matProj);
+			m_BoxList[ibox].SetMatrix(&m_matWorld, &m_matView, &m_matProj);
 			m_BoxList[ibox].Render();
 			return;
 		}
@@ -197,10 +200,15 @@ void CBY_CharacterToolSet::CreateCharBox(float fX, float fY, float fZ)
 			return;
 		}
 	}
-
 	CBY_CharBox box;
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
+
 	box.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-	box.CreateBox(m_iBoneSelect, m_BindBone->m_ObjectList[m_iBoneSelect]->m_Bone.m_vPos, fX, fY, fZ);
+	box.CreateBox(m_iBoneSelect, m_BindBone->m_ObjectList[m_iBoneSelect]->m_Bone.m_vPos, fX, fY, fZ,mat);
+	D3DXVECTOR3 size = D3DXVECTOR3(fX, fY, fZ);
+	box.SetInitBoxSize(size);						//초기 박스 사이즈
+	box.SetInitPos(m_BindBone->m_ObjectList[m_iBoneSelect]->m_Bone.m_vPos);		//초기 위치
 	box.SetParentMatrix(&m_BindBone->m_ObjectList[m_iBoneSelect]->m_matCalculation);
 	box.SetBindMatrix(&m_ObjList[0]->m_matBoneBindPoss[m_iBoneSelect]);
 	m_BoxList.push_back(box);
@@ -287,21 +295,25 @@ void CBY_CharacterToolSet::SetFrameTime(int m_dwState, float start, float end)
 
 void CBY_CharacterToolSet::CreateColBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 	{
 		D3DXVECTOR3 size = m_BoxList[iBox].GetSize();
 		m_BoxList[iBox].Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
 		m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-			m_BoxList[iBox].GetPos(), size.x, size.y, size.z);
+			m_BoxList[iBox].GetPos(), size.x, size.y, size.z, mat);
 	}
 }
 
 void CBY_CharacterToolSet::SetCharBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter.y = (m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.y + m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.y) / 2;
 	D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
 	m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
+	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z,mat);
 }
 
 bool CBY_CharacterToolSet::Release()

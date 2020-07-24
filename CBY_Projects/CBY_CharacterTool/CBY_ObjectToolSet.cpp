@@ -203,8 +203,10 @@ void CBY_ObjectToolSet::CreateCharBox(float fX, float fY, float fZ)
 	}
 
 	CBY_CharBox box;
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	box.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-	box.CreateBox(m_iBoneSelect, m_BindBone->m_ObjectList[m_iBoneSelect]->m_Bone.m_vPos, fX, fY, fZ);
+	box.CreateBox(m_iBoneSelect, m_BindBone->m_ObjectList[m_iBoneSelect]->m_Bone.m_vPos, fX, fY, fZ,mat);
 	box.SetParentMatrix(&m_BindBone->m_ObjectList[m_iBoneSelect]->m_matCalculation);
 	box.SetBindMatrix(&m_ObjList[0]->m_matBoneBindPoss[m_iBoneSelect]);
 	m_BoxList.push_back(box);
@@ -294,20 +296,24 @@ void CBY_ObjectToolSet::SetFrameTime(int m_dwState, float start, float end)
 
 void CBY_ObjectToolSet::CreateColBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	for (int iBox = 0; iBox < m_BoxList.size(); iBox++)
 	{
 		D3DXVECTOR3 size = m_BoxList[iBox].GetSize();
 		m_BoxList[iBox].Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
 		m_BoxList[iBox].CreateBox(m_BoxList[iBox].GetBoneIndex(),
-			m_BoxList[iBox].GetPos(), size.x, size.y, size.z);
+			m_BoxList[iBox].GetPos(), size.x, size.y, size.z,mat);
 	}
 }
 
 void CBY_ObjectToolSet::SetCharBox()
 {
+	D3DXMATRIX mat;
+	D3DXMatrixIdentity(&mat);
 	m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter.y = (m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax.y + m_ObjList[0]->m_ObjList[0]->m_CharBox.vMin.y) / 2;
 	D3DXVECTOR3 size = m_ObjList[0]->m_ObjList[0]->m_CharBox.vMax - m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter;
 	m_CharBox.Create(m_obj.m_pd3dDevice, m_obj.m_pContext);
-	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z);
+	m_CharBox.CreateBox(0, m_ObjList[0]->m_ObjList[0]->m_CharBox.vCenter, size.x, size.y, size.z, mat);
 }
 

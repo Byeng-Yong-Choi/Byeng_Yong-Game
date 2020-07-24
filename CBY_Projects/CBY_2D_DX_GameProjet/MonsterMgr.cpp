@@ -24,8 +24,6 @@ HRESULT MonsterMgr::Create(ID3D11Device* pd3dDevice, ID3D11DeviceContext* Contex
 		mon->GetMonsterSrc(m_PigSrc.get(), m_RoboSrc.get(), m_BossSrc.get(), m_HPSrc.get());
 		m_MonsterQueue.Push(mon);
 	}
-
-
 	return hr;
 }
 

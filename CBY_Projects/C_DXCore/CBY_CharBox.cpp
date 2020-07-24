@@ -65,7 +65,7 @@ HRESULT CBY_CharBox::CreateIndexData()
 }
 
 
-void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize,float fZsize)
+void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYsize, float fZsize, D3DXMATRIX mRot)
 {
 	m_iBoneIndex = index;
 
@@ -76,14 +76,12 @@ void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYs
 	m_vBoxSize.y = fYsize;
 	m_vBoxSize.z = fZsize;
 
-	m_vMax = vPos + m_vBoxSize;
-	m_vMin = vPos - m_vBoxSize;
+	//D3DXVECTOR3 center = D3DXVECTOR3(0, 0, 0);
+	m_vMax = m_Box.vCenter + m_vBoxSize;
+	m_vMin = m_Box.vCenter - m_vBoxSize;
 
-	D3DXVECTOR3 aa;
-	aa= (m_vMax + m_vMin)/2;
-	
-	m_Box.vMax = m_vMax;
-	m_Box.vMin = m_vMin;
+	m_Box.vMax = m_Box.vCenter + m_vBoxSize;
+	m_Box.vMin = m_Box.vCenter - m_vBoxSize;
 
 	m_Box.fExtent[0] = m_vBoxSize.x;
 	m_Box.fExtent[1] = m_vBoxSize.y;
@@ -95,6 +93,22 @@ void CBY_CharBox::CreateBox(int index, D3DXVECTOR3 vPos, float fXsize, float fYs
 
 	UpdateBoxVB();
 }
+
+void CBY_CharBox::UpdateBoxAxis(D3DXMATRIX mat)
+{
+	D3DXVECTOR3 vX = D3DXVECTOR3(1, 0, 0);
+	D3DXVECTOR3 vY = D3DXVECTOR3(0, 1, 0);
+	D3DXVECTOR3 vZ = D3DXVECTOR3(0, 0, 1);
+
+	D3DXVec3TransformNormal(&vX, &vX, &mat);
+	D3DXVec3TransformNormal(&vY, &vY, &mat);
+	D3DXVec3TransformNormal(&vZ, &vZ, &mat);
+
+	m_Box.vAxis[0] = vX;
+	m_Box.vAxis[1] = vY;
+	m_Box.vAxis[2] = vZ;
+}
+
 
 void CBY_CharBox::SetBox(float fXsize, float fYsize, float fZsize, int id)
 {
@@ -147,6 +161,11 @@ void CBY_CharBox::SetBox(float fXsize, float fYsize, float fZsize, int id)
 	m_Box.fExtent[2] = m_vMax.z - m_vPos.z;
 
 	m_vBoxSize = m_Box.fExtent;
+	m_vInitBoxSize = m_vBoxSize;
+
+	D3DXVECTOR3 center = D3DXVECTOR3(0, 0, 0);
+	m_vMax = center + m_vBoxSize;
+	m_vMin = center - m_vBoxSize;
 
 	UpdateBoxVB();
 }

@@ -80,8 +80,6 @@ namespace CBY
 	{
 		m_iBoneIndex = index;
 
-		//D3DXVec3TransformCoord(&vPos, &vPos, &mRot);
-		//D3DXVec3TransformNormal(&vPos, &vPos, &mRot);
 		m_vPos = vPos;
 		m_Box.vCenter = vPos;
 
@@ -89,15 +87,9 @@ namespace CBY
 		m_vBoxSize.y = fYsize;
 		m_vBoxSize.z = fZsize;
 
-		//D3DXVec3TransformNormal(&m_vBoxSize, &m_vBoxSize, &mRot);
 		D3DXVECTOR3 center = D3DXVECTOR3(0, 0, 0);
 		m_vMax = center + m_vBoxSize;
 		m_vMin = center - m_vBoxSize;
-
-		//D3DXVec3TransformCoord(&m_vMax, &m_vMax, &mRot);
-		//D3DXVec3TransformCoord(&m_vMin, &m_vMin, &mRot);
-		//D3DXVec3TransformNormal(&m_vMax, &m_vMax, &mRot);
-		//D3DXVec3TransformNormal(&m_vMin, &m_vMin, &mRot);
 
 		m_Box.vMax = m_Box.vCenter + m_vBoxSize;
 		m_Box.vMin = m_Box.vCenter- m_vBoxSize;

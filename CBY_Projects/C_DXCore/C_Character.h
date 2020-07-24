@@ -19,8 +19,10 @@ public:
 public: //object
 	virtual bool ObjLoad(T_STR pszSkinLoad);
 	virtual void SetObjectSocket(int iSocket, int iObjSocket, int iFireSocket,int iobj);
+	virtual void ColBoxUpdate(D3DXMATRIX world);
 
 public: //Set
+	virtual void SetMatrix(D3DXMATRIX* world, D3DXMATRIX* view, D3DXMATRIX* proj)override;
 	inline void SetCameraSocket(DWORD dwSocket) { m_dwCameraSocket = dwSocket; }
 	inline void SetFireSocket(DWORD dwSocket) { m_dwFireSocket = dwSocket; }
 
