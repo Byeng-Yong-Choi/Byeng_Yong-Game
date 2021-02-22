@@ -67,34 +67,34 @@ bool CBY_BackViewCamera::Frame()
 		Side(-1.0f);
 	}
 
-	m_fRadius += m_nMouseWheelDelta * m_fRadius * 0.1f / 120.0f;
-	m_fRadius = __min(m_fMaxRadius, m_fRadius);
-	m_fRadius = __max(m_fMinRadius, m_fRadius);
-	m_nMouseWheelDelta = 0;
+	//m_fRadius += m_nMouseWheelDelta * m_fRadius * 0.1f / 120.0f;
+	//m_fRadius = __min(m_fMaxRadius, m_fRadius);
+	//m_fRadius = __max(m_fMinRadius, m_fRadius);
+	//m_nMouseWheelDelta = 0;
 
-	float x = -(I_Input.m_Mouse.x - (Winrt.right / 2)) / (Winrt.right / 2);
-	float y = ((Winrt.bottom / 2) - I_Input.m_Mouse.y) / (Winrt.bottom / 2);
-	float z = 0;
-	float mag = x * x + y * y;
-	if (mag > 1.0f)
-	{
-		float scale = 1.0f / sqrtf(mag);
-		x *= scale*10;
-		y *= scale*10;
-	}
-	else
-	{
-		z = sqrtf(1.0f - mag);
-	}
+	//float x = -(I_Input.m_Mouse.x - (Winrt.right / 2)) / (Winrt.right / 2);
+	//float y = ((Winrt.bottom / 2) - I_Input.m_Mouse.y) / (Winrt.bottom / 2);
+	//float z = 0;
+	//float mag = x * x + y * y;
+	//if (mag > 1.0f)
+	//{
+	//	float scale = 1.0f / sqrtf(mag);
+	//	x *= scale*10;
+	//	y *= scale*10;
+	//}
+	//else
+	//{
+	//	z = sqrtf(1.0f - mag);
+	//}
 
-	m_At.x += x;
-	m_At.y += y;
-	m_At.z += -z;
+	//m_At.x += x;
+	//m_At.y += y;
+	//m_At.z += -z;
 
-	//m_At = D3DXVECTOR3(0, 0, -300);
-	CreateViewMatrix(m_Pos, m_At);
-	D3DXVECTOR3 vPos = m_At + m_BackPos *m_fRadius;
-	D3DXMatrixLookAtLH(&m_View, &vPos, &m_At, &m_DefaultUp);
+	////m_At = D3DXVECTOR3(0, 0, -300);
+	//CreateViewMatrix(m_Pos, m_At);
+	//D3DXVECTOR3 vPos = m_At + m_BackPos *m_fRadius;
+	//D3DXMatrixLookAtLH(&m_View, &vPos, &m_At, &m_DefaultUp);
 	
 	//D3DXMATRIX mCameraRot;
 	//D3DXMatrixInverse(&mCameraRot, NULL, m_ViewArcBall.GetRotationMatrix());
@@ -133,6 +133,9 @@ bool CBY_BackViewCamera::Frame()
 	//D3DXMATRIX mTrans;
 	//D3DXMatrixTranslation(&mTrans, -m_vModelCenter.x, -m_vModelCenter.y, -m_vModelCenter.z);
 	//m_World = mTrans * m_mModelRot;
+	m_fYaw = 3.141592f;
+	m_fPitch = 0.5f; 
+	Update(D3DXVECTOR4(m_fPitch, m_fYaw, m_fRoll, 0));
 
 	UpdateVector();
 	return true;
@@ -146,6 +149,15 @@ void CBY_BackViewCamera::Side(float fValue)
 void CBY_BackViewCamera::Front(float fValue)
 {
 	m_At.z += fValue * g_SecondTime* m_fSpeed;
+}
+
+void CBY_BackViewCamera::Update(D3DXVECTOR4 rotvalue)
+{
+	D3DXQUATERNION qRot;
+	D3DXMATRIX matRot;
+	D3DXQuaternionRotationYawPitchRoll(&qRot, rotvalue.y, rotvalue.x, rotvalue.z);
+	D3DXMatrixAffineTransformation(&matRot, 1.0f, NULL, &qRot, &m_Pos);
+	D3DXMatrixInverse(&m_View, NULL, &matRot);
 }
 
 

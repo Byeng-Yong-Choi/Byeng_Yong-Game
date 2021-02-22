@@ -49,8 +49,11 @@ bool CBY_CharacterToolSet::Frame()
 		}
 		else
 		{
-			m_BindBone->Update(m_StateList[m_dwState].m_iStartFrame, m_StateList[m_dwState].m_iEndFrame,
-				m_fElapseTick, m_pMatrixList);
+			if (m_StateList.size() != 0)
+			{
+				m_BindBone->Update(m_StateList[m_dwState].m_iStartFrame, m_StateList[m_dwState].m_iEndFrame,
+					m_fElapseTick, m_pMatrixList);
+			}
 		}
 	}
 	else if (m_dwAniType == CHAR_MTRTYPE)
@@ -108,6 +111,11 @@ void CBY_CharacterToolSet::SetState(int dw)
 		m_bViewCheck = false;
 		return;
 	}
+	if (m_StateList.size() == 0)
+	{
+		return;
+	}
+
 	if (m_dwAniType == CHAR_MTRTYPE)
 	{
 		m_StateList[m_dwState].m_Bone.m_fElapseTick = 0;

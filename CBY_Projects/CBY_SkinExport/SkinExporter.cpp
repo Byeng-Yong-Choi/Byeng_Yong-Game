@@ -1,7 +1,7 @@
 #include "header.h"
 #include "CExpGlobal.h"
 #include "resource.h"
-#define CBY_SKINEXPORT_CLASS_ID	Class_ID(0x4d1b25ca, 0x128d6145)
+#define CBY_SKINEXPORT_CLASS_ID	Class_ID(0x35730dfc, 0x68b91b29)
 
 class C_SkinExport : public UtilityObj 
 {

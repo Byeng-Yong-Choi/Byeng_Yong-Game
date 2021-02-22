@@ -19,6 +19,7 @@ public:
 	virtual bool Frame() override;
 	void Side(float fValue);
 	void Front(float fValue);
+	void Update(D3DXVECTOR4 rotvalue);
 	virtual void MsgProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam);
 
 public:

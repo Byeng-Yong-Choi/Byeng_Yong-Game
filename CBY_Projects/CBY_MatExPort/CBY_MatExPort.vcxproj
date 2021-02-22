@@ -142,7 +142,11 @@
       <AdditionalDependencies>bmm.lib;core.lib;geom.lib;gfx.lib;mesh.lib;maxutil.lib;maxscrpt.lib;gup.lib;paramblk2.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>copy "..\\..\\output\\Debug\\CBY_MatExPort\\CBY_MatExPort.dlu" "D:\3DS MAX\3ds Max 2019\Plugins"</Command>
+      <Command>copy "../../output/Debug/CBY_MatExPort/CBY_MatExPort.dlu" "C:/Program Files/Autodesk/3ds Max 2018/Plugins/"</Command>
+    </PostBuildEvent>
+    <PostBuildEvent>
+      <Command>
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

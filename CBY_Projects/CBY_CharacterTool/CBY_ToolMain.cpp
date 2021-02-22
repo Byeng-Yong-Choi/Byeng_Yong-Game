@@ -279,10 +279,12 @@ bool CBY_ToolMain::Init()
 	//_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	m_ModelCamera = std::make_shared<CModelViewCamera>();
 	m_BackCamera = std::make_shared<CBY_BackViewCamera>();
+	m_DebugCamera =std::make_shared<C_DebugCamera>();
 	m_ModelCamera->SetViewProj(3000.0f);
 	m_BackCamera->m_Pos.y = 300;
 	m_BackCamera->m_Pos.z = 200;
 	m_BackCamera->SetViewProj(3000.0f);
+	m_DebugCamera->SetViewProj(3000.0f);
 	m_pMainCamera = m_ModelCamera.get();
 
 	m_CharCamera = std::make_shared<CBY_CharacterCamera>();
@@ -340,9 +342,12 @@ bool CBY_ToolMain::Frame()
 
 	float a = I_Col.Lerp(-10, 10, fcos);
 	float b = I_Col.Lerp(-10, 10, fsin);
-	m_Light.g_vEyePos.x = m_pMainCamera->m_Pos.x;	//a
-	m_Light.g_vEyePos.y = m_pMainCamera->m_Pos.y;	//20
-	m_Light.g_vEyePos.z = m_pMainCamera->m_Pos.z;	//b
+	m_Light.g_vEyePos.x = a;	//a
+	m_Light.g_vEyePos.y = 20;	//20
+	m_Light.g_vEyePos.z = b;	//b
+	//m_Light.g_vEyePos.x = m_pMainCamera->m_Pos.x;	//a
+	//m_Light.g_vEyePos.y = m_pMainCamera->m_Pos.y;	//20
+	//m_Light.g_vEyePos.z = m_pMainCamera->m_Pos.z;	//b
 	m_Light.g_vEyePos.w = 1;
 
 	m_Light.g_vLightDir.x = 0;
@@ -410,10 +415,11 @@ bool CBY_ToolMain::Frame()
 		//m_QuadTree->Frame();
 		D3DXMATRIX zpos;
 		D3DXMatrixIdentity(&zpos);
-		zpos._42 = 20;
-		zpos._43 = -30;
-		D3DXMATRIX charmat = m_Character->m_pMatrixList[46] * zpos * m_Character->m_matWorld;
+		zpos._42 = 120;
+		zpos._43 = 60;
+		D3DXMATRIX charmat = zpos * m_Character->m_matWorld;
 		D3DXVECTOR3 bonepos = D3DXVECTOR3(charmat._41, charmat._42, charmat._43);
+		//D3DXMatrixRotationY(&bonepos, 0.1f);
 		m_pMainCamera->m_Pos = bonepos;
 		//m_pMainCamera->m_Pos.z -= 30;
 
@@ -511,6 +517,7 @@ void CBY_ToolMain::SetCharacterPlay()
 	if (m_Character == nullptr) return;
 	GetCharAction(CHAR_IDLE);
 
+	//m_pMainCamera = m_DebugCamera.get();
 	m_pMainCamera = m_BackCamera.get();
 	//m_pMainCamera = m_CharCamera.get();
 }

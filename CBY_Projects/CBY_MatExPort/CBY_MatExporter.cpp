@@ -1,7 +1,7 @@
 #include "header.h"
 #include "CExpGlobal.h"
 #include "resource.h"
-#define CBY_MatEXPORT_CLASS_ID	Class_ID(0x615252bc, 0x703d76ab)
+#define CBY_MatEXPORT_CLASS_ID Class_ID(0x4ccb46c6, 0x312e5b58)
 
 class C_MatExport : public UtilityObj
 {

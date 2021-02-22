@@ -6,6 +6,7 @@
 #include "CModelViewCamera.h"
 #include "CBY_BackViewCamera.h"
 #include "CBY_CharacterCamera.h"
+#include "C_DebugCamera.h"
 #include "CBY_SkyBox.h"
 #include "CBY_QuadTree.h"
 #include "CBY_Shadow.h"
@@ -18,6 +19,7 @@ public:
 	std::shared_ptr<CModelViewCamera> m_ModelCamera;
 	std::shared_ptr<CBY_BackViewCamera> m_BackCamera;
 	std::shared_ptr<CBY_CharacterCamera> m_CharCamera;
+	std::shared_ptr<C_DebugCamera> m_DebugCamera;
 	std::shared_ptr<CBY_CharacterToolSet> m_Character;
 	std::shared_ptr<CBY_SkyBox> m_SkyBox;
 	std::shared_ptr<C_Map_shape> m_Map;
